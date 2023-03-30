@@ -1,0 +1,29 @@
+Dãy con đơn điệu tăng dài nhất
+
+Gọi F[i] là độ dài của dãy con đơn điệu tăng dài nhất xét các phần tử tử a[1..i]
+
+Như vậy, yêu cầu của bài toán: Xác định F[n]
+
+Xây dựng công thức cho F[i]
+
+Có 2 trường hợp xảy ra:
+
+- TH1: Chọn a[i] vào dãy tăng dần
+	F[i] = max(F[j] + 1), với j < i và a[j] < a[i]
+- TH2: Không chọn a[i] vào dãy tăng dần
+	F[i] = F[i-1]
+
+Tổng hợp lại: F[i] = max(F[i-1], F[j] + 1), với j < i và a[j] < a[i]
+
+Mặt khác, ta thấy F[i] là một dãy tăng dần
+
+F[1] <= F[2] <= ... <= F[i-1]
+
+Tìm j lớn nhất thỏa mãn: j < i và a[j] < a[i]
+
+BTVN ngày 29/1/2023:
+
+Dãy con đơn điệu tăng dài nhất ver 7: Sửa lại theo ý tưởng ở trên.
+
+https://tailieu.hoctincungthukhoa.com/2.%20Review%20QHD%20-%20Nguyen%20Thanh%20Tung.pdf
+
